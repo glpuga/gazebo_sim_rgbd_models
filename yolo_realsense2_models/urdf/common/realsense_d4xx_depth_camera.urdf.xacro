@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="device">
+
+  <xacro:macro name="realsense_d4xx_depth_camera"
+    params="frame_id width height hfov near_clip far_clip topic update_rate">
+
+    <gazebo reference="${frame_id}">
+
+      <sensor name="${frame_id}_sensor" type="rgbd_camera">
+        <gz_frame_id>${parent}</gz_frame_id>
+        <camera>
+          <image>
+            <width>${width}</width>
+            <height>${height}</height>
+            <format>R_FLOAT32</format>
+            <hfov>${pi/180.0 * 87.0}</hfov>
+          </image>
+          <clip>
+            <near>${near_clip}</near>
+            <far>${far_clip}</far>
+          </clip>
+        </camera>
+        <always_on>true</always_on>
+        <update_rate>${update_rate}</update_rate>
+        <visualize>true</visualize>
+        <topic>${topic}</topic>
+      </sensor>
+
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

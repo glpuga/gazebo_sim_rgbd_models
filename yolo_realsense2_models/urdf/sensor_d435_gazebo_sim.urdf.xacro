@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="d435">
+
+  <xacro:macro name="sensor_d435_gazebo_sim"
+    params="parent light_mode:=true">
+
+    <xacro:include
+      filename="$(find yolo_realsense2_models)/urdf/common/realsense_d4xx_color_camera.urdf.xacro" />
+    <xacro:include
+      filename="$(find yolo_realsense2_models)/urdf/common/realsense_d4xx_depth_camera.urdf.xacro" />
+
+    <!-- TODO implement light_mode=false to enable full wxh resolution -->
+    <xacro:realsense_d4xx_color_camera
+      frame_id="camera_color_frame"
+      width="640"
+      height="480"
+      hfov="87"
+      near_clip="0.28"
+      far_clip="100.0"
+      topic="realsense_d435i/color"
+      update_rate="5"
+    />
+
+    <xacro:realsense_d4xx_depth_camera
+      frame_id="camera_depth_frame"
+      width="640"
+      height="480"
+      hfov="87"
+      near_clip="0.28"
+      far_clip="100.0"
+      topic="realsense_d435/depth"
+      update_rate="5"
+    />
+
+  </xacro:macro>
+
+</robot>
