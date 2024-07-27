@@ -114,26 +114,7 @@ def launch_setup(context, *args, **kwargs):
         }.items(),
     )
 
-    # realsense2_description is needed because the meshes from the URDF are
-    # loaded from there, but it's not a direct dependency. This is a workaround
-    # to make sure the meshes are found because of the way Gazebo finds resources.
-    paths_to_resources = [
-        AppendEnvironmentVariable(
-            "GZ_SIM_RESOURCE_PATH",
-            get_package_share_directory("yolo_realsense2_models"),
-        ),
-        AppendEnvironmentVariable(
-            "GZ_SIM_RESOURCE_PATH",
-            get_package_share_directory("realsense2_description"),
-        ),
-        AppendEnvironmentVariable(
-            "GZ_SIM_RESOURCE_PATH",
-            get_package_share_directory("yolo_realsense2_models_testbench"),
-        ),
-    ]
-
     return [
-        *paths_to_resources,
         gzserver_launch_include,
         gzclient_launch_include,
         gazebo_ros_bride_node,
