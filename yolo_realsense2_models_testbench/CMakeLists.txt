@@ -33,4 +33,12 @@ install(
     DESTINATION share/${PROJECT_NAME}
 )
 
+# Following hooks are used to ensure that the correct environment variables
+# will be set by exectuting 'source install/setup.bash' after compilation.
+# When using this template for your project, change the filenames of the
+# files in the 'hooks' folder, to correspond to your project name.
+# See https://github.com/gazebosim/ros_gz_project_template/issues/16#issuecomment-1856361918
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.dsv.in")
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.sh.in")
+
 ament_package()
