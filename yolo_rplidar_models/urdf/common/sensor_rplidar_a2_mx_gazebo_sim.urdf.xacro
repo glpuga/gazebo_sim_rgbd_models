@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="d435">
 
   <xacro:macro name="sensor_rplidar_a2_mx_gazebo_sim"
-    params="parent prefix update_rate topic samples resolution range_min range_max visualize:=true">
+    params="prefix update_rate topic samples resolution range_min range_max visualize:=true">
 
     <gazebo reference="${prefix}_rplidar_optical_link">
 

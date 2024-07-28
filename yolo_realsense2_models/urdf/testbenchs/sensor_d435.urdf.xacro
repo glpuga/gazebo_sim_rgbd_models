@@ -12,5 +12,5 @@
   <link name="testbench_camera_link" />
 
   <xacro:sensor_d435 parent="testbench_camera_link" use_nominal_extrinsics="true" />
-  <xacro:sensor_d435_gazebo_sim parent="testbench_camera_link" light_mode="true" />
+  <xacro:sensor_d435_gazebo_sim light_mode="true" />
 </robot>

@@ -13,6 +13,6 @@
   <link name="testbench_lidar_link" />
 
   <xacro:sensor_rplidar_a2_m12 parent="testbench_lidar_link" prefix="single" />
-  <xacro:sensor_rplidar_a2_m12_gazebo_sim parent="testbench_lidar_link" prefix="single" />
+  <xacro:sensor_rplidar_a2_m12_gazebo_sim prefix="single" />
 
 </robot>

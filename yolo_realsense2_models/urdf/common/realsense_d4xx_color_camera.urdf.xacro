@@ -7,7 +7,7 @@
     <gazebo reference="${frame_id}">
 
       <sensor name="${frame_id}_sensor" type="camera">
-        <gz_frame_id>${parent}</gz_frame_id>
+        <gz_frame_id>${frame_id}</gz_frame_id>
         <camera>
           <image>
             <width>${width}</width>
