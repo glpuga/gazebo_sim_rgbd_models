@@ -1,0 +1,198 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Grid1/Status1
+        - /Model1
+        - /Lidar1
+      Splitter Ratio: 0.6828571557998657
+    Tree Height: 460
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 0; 0; 0
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 100
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/TF
+          Enabled: true
+          Filter (blacklist): ""
+          Filter (whitelist): ""
+          Frame Timeout: 15
+          Frames:
+            All Enabled: true
+            single_mesh_link:
+              Value: true
+            single_rplidar_optical_link:
+              Value: true
+            testbench_base_link:
+              Value: true
+            testbench_lidar_link:
+              Value: true
+          Marker Scale: 0.10000000149011612
+          Name: TF
+          Show Arrows: true
+          Show Axes: true
+          Show Names: true
+          Tree:
+            testbench_base_link:
+              testbench_lidar_link:
+                single_mesh_link:
+                  {}
+                single_rplidar_optical_link:
+                  {}
+          Update Interval: 0
+          Value: true
+        - Alpha: 1
+          Class: rviz_default_plugins/RobotModel
+          Collision Enabled: false
+          Description File: ""
+          Description Source: Topic
+          Description Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /robot_description
+          Enabled: true
+          Links:
+            All Links Enabled: true
+            Expand Joint Details: false
+            Expand Link Details: false
+            Expand Tree: false
+            Link Tree Style: Links in Alphabetic Order
+            single_mesh_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            single_rplidar_optical_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            testbench_base_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            testbench_lidar_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+          Mass Properties:
+            Inertia: false
+            Mass: false
+          Name: RobotModel
+          TF Prefix: ""
+          Update Interval: 0
+          Value: true
+          Visual Enabled: true
+      Enabled: true
+      Name: Model
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz_default_plugins/LaserScan
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 0
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: LaserScan
+          Position Transformer: XYZ
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.05000000074505806
+          Style: Flat Squares
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /scan
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+      Enabled: true
+      Name: Lidar
+  Enabled: true
+  Global Options:
+    Background Color: 246; 245; 244
+    Fixed Frame: testbench_base_link
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+  Transformation:
+    Current:
+      Class: rviz_default_plugins/TF
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/XYOrbit
+      Distance: 4.565391540527344
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -0.6796877384185791
+        Y: 1.5258865356445312
+        Z: -6.139278411865234e-06
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.7853981852531433
+      Target Frame: <Fixed Frame>
+      Value: XYOrbit (rviz_default_plugins)
+      Yaw: 2.0653984546661377
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1123
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd000000020000000000000160000003f9fc0200000007fb000000100044006900730070006c006100790073010000004800000215000000f300fffffffb0000000a0049006d00610067006501000002cd000001740000000000000000fb0000000a005600690065007700730100000264000001dd000000c500fffffffb000000160044006500700074006800200049006d00610067006501000003330000010e0000000000000000fb0000000a0049006d0061006700650000000370000000d10000000000000000fb0000000a0049006d0061006700650100000370000000d10000000000000000fb0000000a0049006d0061006700650100000370000000d100000000000000000000000100000140000003f9fc0200000002fb0000000a0049006d0061006700650100000048000001d10000000000000000fb0000000a0049006d00610067006501000000480000013a0000000000000000000005d7000003f900000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Views:
+    collapsed: false
+  Width: 1854
+  X: 66
+  Y: 40

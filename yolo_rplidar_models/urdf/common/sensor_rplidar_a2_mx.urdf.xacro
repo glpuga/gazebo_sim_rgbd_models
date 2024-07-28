@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="device">
+
+  <xacro:macro name="sensor_rplidar_a2_mx"
+    params="parent prefix">
+
+    <material name="${prefix}_lidar_color">
+      <color rgba="0.3 0.3 0.3 1" />
+    </material>
+
+    <joint name="${prefix}_rplidar_optical_link_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link="${prefix}_rplidar_optical_link" />
+      <origin xyz="0 0 0.031" rpy="0 0 0" />
+    </joint>
+
+    <link name="${prefix}_rplidar_optical_link" />
+
+    <joint name="${prefix}_mesh_link_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link="${prefix}_mesh_link" />
+    </joint>
+
+    <link name="${prefix}_mesh_link">
+      <inertial>
+        <mass value="0.01" />
+        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01" />
+      </inertial>
+      <collision>
+        <origin xyz="0.0 0.0 0.0205" rpy="0 0 0" />
+        <geometry>
+          <cylinder radius="0.035" length="0.041" />
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0.0 0.0 0.0205" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="file:$(find yolo_rplidar_models)/meshes/rplidar_a2.stl" />
+        </geometry>
+        <material name="${prefix}_lidar_color" />
+      </visual>
+    </link>
+
+
+  </xacro:macro>
+
+</robot>

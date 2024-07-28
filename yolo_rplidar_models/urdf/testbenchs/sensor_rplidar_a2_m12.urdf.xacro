@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="d435_sensor" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find yolo_rplidar_models)/urdf/sensor_rplidar_a2_m12.urdf.xacro" />
+  <xacro:include
+    filename="$(find yolo_rplidar_models)/urdf/sensor_rplidar_a2_m12_gazebo_sim.urdf.xacro" />
+
+  <link name="testbench_base_link" />
+  <joint name="testbench_lidar_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="testbench_base_link" />
+    <child link="testbench_lidar_link" />
+  </joint>
+  <link name="testbench_lidar_link" />
+
+  <xacro:sensor_rplidar_a2_m12 parent="testbench_lidar_link" prefix="single" />
+  <xacro:sensor_rplidar_a2_m12_gazebo_sim parent="testbench_lidar_link" prefix="single" />
+
+</robot>
