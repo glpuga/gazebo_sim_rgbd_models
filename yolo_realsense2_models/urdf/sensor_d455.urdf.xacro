@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="device">
+
+  <xacro:macro name="sensor_d455"
+    params="parent name:=camera use_nominal_extrinsics:=false add_plug:=false use_mesh:=true">
+    <xacro:include filename="$(find realsense2_description)/urdf/_d455.urdf.xacro" />
+
+    <xacro:sensor_d455 parent="${parent}"
+      name="${name}"
+      use_nominal_extrinsics="${use_nominal_extrinsics}"
+      >
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:sensor_d455>
+
+  </xacro:macro>
+
+</robot>
